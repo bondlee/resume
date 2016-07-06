@@ -1,0 +1,82 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans] {moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[gbk]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKgbk}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage[left=2cm, right=2cm, top=1cm, bottom=1cm, scale=0.75]{geometry}
+\usepackage{CJKgbk}
+%\begin{CJK*}{gbk}{gbsn}
+% personal data
+\firstname{谷}
+\familyname{炫志}
+%\title{God helps those who help themselves}                          % optional, remove / comment the line if not wanted
+\address{浙江大学,}{浙江省杭州市西湖区浙大路38号,310027}%{Hangzhou China 310027}    % optional, remove / comment the line if not wanted
+%\postcode{310027}
+%\address{Hangzhou China 310027}
+\mobile{+86~13735526091}                     % optional, remove / comment the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove / comment the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
+\email{ascorpior@gmail.com}                          % optional, remove / comment the line if not wanted
+%\homepage{hustsxh.is-programmer.com}                    % optional, remove / comment the line if not wanted
+%\quote{Some quote}
+%\end{CJK*}
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+%\makecvtitle
+\maketitle
+\section{教育背景}
+\cventry{2013--2016}{浙江大学}{硕士}{计算机科学与技术}{数据库实验室}{}  % arguments 3 to 6 can be left empty
+\cventry{2008--2012}{长沙学院}{本科}{计算机科学与技术}{}{}
+
+\section {荣誉与奖项}
+\cvitem {2014.10} { 浙江大学优秀研究生}
+\cvitem {2014.05} { 百度之星程序设计竞赛，Top200}
+\cvitem {2014.05} { 微软编程之美程序设计竞赛，Top300}
+\cvitem {2014.04} { 浙江大学第十四届计算机程序设计竞赛，一等奖（第三名）}
+%\cvitem {2010/2009} {ACM-ICPC Harbin/Chengdu/Hefei Division, Silver }
+\cvitem {2009--2011} { 连续三年获得长沙学院校级奖学金，三等奖}
+\cvitem {2010.05} {湖南省第五届大学生计算机程序设计竞赛，三等奖}
+
+\section{项目经验}
+%\cventry{2012.7--today}{R \& D}{Peking University}{Department of Computer Science and Technology}{}{\textit{GIL} Android virtual reality development system.}
+\cventry{2015.04-2015.05}{Trace日志监控系统}{项目描述：该项目主要是通过收集目标程序的调用日志，通过分析这些调用日志将分析结果显示到Web页面}{}{}{本人工作：承担了该项目日志分析计算模块的重构以及重构中所有开发任务。该模块主要是从消息队列中实时地获取程序调用日志记录，对日志记录进行分析计算并将结果写到数据库，之前该计算模块只能在单节点上进行计算。我利用Storm 对该模块进行了重构，将该模块根据计算类型划分为更小的几个模块，分别实现并将模块联系起来形成一个Storm拓扑逻辑，实现了一个分布式的实时的计算模块，提升了该模块的可扩展性以及计算效率。}
+\cventry{2014.12-2015.02}{Azkaban任务调度系统扩展}{项目描述：Azkaban是LinkedIn开源的一个任务流调度系统，该项目主要是在该系统的基础上进行一些扩展功能的开发}{}{}{本人工作：调研该系统的功能及架构，并承担了报警扩展功能的开发。在系统原有的邮件报警功能基础之上，开发了短信和POPO（网易的聊天工具）报警功能，承担该功能从前端到后台所有的开发工作。}
+\cventry{2012.09-2012.12}{eZWalker三维可视化检视系统}{项目描述：开发可插拔的三维可视化系统，通过用户自定义导入三维空间模型图，该系统以Web在线浏览的方式提供设计人员三维检视、建造人员施工模拟以及培训模拟等功能}{}{}{本人工作：主要负责设计并实现了八叉树的数据结构解决了该系统中的碰撞检测问题。通过将三维空间中每个物体表面剖分成若干个三角形，对每个三角形求一个三维包围盒；使用八叉树维护整个三维空间，八叉树的每个节点表示某个子空间，所有三角形的包围盒插入八叉树，对于每次碰撞检测，可以利用八叉树的性质快速将不可能碰撞的三角形都排除，剩下的可能发生碰撞的三角形再逐个进行更精细的计算检测是否碰撞。相比该功能最初的实现在效率上有极其明显的提升。}
+
+\section{工作经验}
+%\cventry{2012.7--today}{R \& D}{Peking University}{Department of Computer Science and Technology}{}{\textit{GIL} Android virtual reality development system.}
+\cventry{2014.11-2015.05}{高级软件工程师（实习）}{网易}{大数据部门}{}{}
+\cventry{2012.06-2012.12}{虚拟现实开发工程师}{北京达美盛软件股份有限公司}{软件研发部门}{}{}
+
+
+\section {专业技能及语言技能}
+\cvitem {\textbf{编程语言}} {C/C++（熟悉），Java（较熟悉），Python（了解，并写过一些小程序）。}
+\cvitem {\textbf{算法}} {熟悉多种常见的算法和数据结构，并有一定的深入理解。}
+\cvitem {\textbf{其它}} {理解计算机网络、计算机操作系统、计算机系统结构等基础原理。}
+\cvitem {} {了解一些大数据相关的技术（Hadoop，Storm等），并有Storm相关的开发经验。}
+%\cvitem {} {了解一些常见的设计模式；了解Linux和SQL相关知识。}
+%\cvitem {} {了解Linux和SQL相关知识。}
+
+\end{CJK*}
+\end{document}
+
+%% end of file `template.tex'.

@@ -1,0 +1,11 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# log:
+*.log
+*.out
+*.bak
+*.dvi
+*.pdf

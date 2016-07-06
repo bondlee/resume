@@ -1,0 +1,79 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans] {moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{2.5cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage[left=2cm, right=2cm, top=1cm, bottom=1cm, scale=0.75]{geometry}
+\usepackage{CJKutf8}
+%\begin{CJK*}{UTF8}{gbsn}
+% personal data
+\firstname{李}
+\familyname{邦鹏}
+%\title{God helps those who help themselves}                          % optional, remove / comment the line if not wanted
+\address{浙江大学,}{浙江省杭州市西湖区浙大路38 号,310027}%{Hangzhou China 310027}    % optional, remove / comment the line if not wanted
+%\postcode{310027}
+%\address{Hangzhou China 310027}
+\mobile{+86~18665927496}                     % optional, remove / comment the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove / comment the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
+\email{bondlee@zju.edu.cn}                          % optional, remove / comment the line if not wanted
+%\homepage{hustsxh.is-programmer.com}                    % optional, remove / comment the line if not wanted
+%\quote{Some quote}
+%\end{CJK*}
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+%\makecvtitle
+\maketitle
+\section{教育背景}
+\cventry{2014~2017}{浙江大学}{硕士}{计算机科学与技术}{数据库实验室}{}  % arguments 3 to 6 can be left empty
+\cventry{2007~2011}{中南大学}{本科}{信息安全}{}{}
+
+\section {荣誉与奖项}
+\cvitem {2015.12} {淘宝穿衣搭配大赛 , Top20 (17/2100).}
+\cvitem {2015.11} {新浪微博互动预测大赛, Top5 (5/2293).}
+\cvitem {2015.10} {浙江大学三好研究生, (15\%).}
+\cvitem {2015.07} {阿里巴巴移动推荐算法大赛, Top50 (23/7156).}
+\cvitem {2015.04} {浙江大学第六届"华为杯"创新大赛, Top3.}
+\cvitem {2011.07} {第四界全国大学生信息安全竞赛, 三等奖.}
+
+\section{项目经验}
+\cventry{2015.09--至今}{Wiforce}{项目描述：该项目主要应用Wi-Fi Sniffer探测室内用户移动设备信号，计算得到用户的室内位置数据。融合室内空间结构与具体的业务数据，挖掘用户行为，计算区域价值和影响力。}{}{}{本人工作：利用ELK、Redis、MongoDb搭建实时数据流采集和存储平台，使用GBDT等机器学习算法优化楼层定位结果，将楼层定位准确率从70\% 提高到95\%。实施性能测试，优化平台性能。后期展开具体应用场景的业务建模与分析。}
+
+\cventry{2015.03--2015.12}{阿里巴巴天池大数据竞赛}{项目描述：天池大数据竞赛是阿里巴巴在天池平台上开展的数据挖掘竞赛}{}{}{本人工作：与同学组队（共2人）参加了其中的移动推荐算法，新浪微博互动预测和淘宝穿衣搭配三场比赛。基于阿里巴巴提供的脱敏数据(数据记录10亿级)进行分析建模，编写MapReduce任务提取特征，调用Xlib的分布式机器学习算法进行模型训练、融合、预测。2015年天池科学家排行榜第22 名}
+
+\cventry{2011.08--2013.08}{hwclouds}{项目描述：hwclouds是华为2011年成立的公有云项目(工作项目)。}{}{}{本人工作：持续负责hwclouds 公项目从C01-C06 五个版本的维护和开发，参与了其中大部分模块如弹性计算云，云托管和云存储的开发和部分设计以及后期的性能测试，为项目引入reviewboard和持续集成等开发管理工具，参与开发了华为云存储Java 版SDK （第一版）和华为云计算HWS的API 相关工作的筹备和试验。}
+
+\section{工作经验}
+\cventry{2011.08-2013.08}{软件工程师}{深圳华为技术有限公司}{企业BG云服务部}{}{}
+
+\section {专业技能及语言技能}
+\cvitem {\textbf{编程语言}} {Python(熟悉)，Java(较熟悉)，JavaScript（用过）}
+\cvitem {\textbf{机器学习}} {熟悉常见的机器学习和数据挖掘算法，对深度学习有一定了解。}
+\cvitem {\textbf{算法}} {熟悉多种常见的算法和数据结构，并有一定的深入理解。}
+\cvitem {\textbf{其它}} {理解计算机网络、计算机操作系统、计算机系统结构等基础原理,能比较熟练的使用Linux,了解git，svn版本控制工具。使用过一些开源数据项目（Storm，Kafka，ELK等），比赛过程中编写过较多的MapReduce小程序。}
+
+\section {科研工作}
+\cventry{论文}{Effective Navigation Objects Extraction in Web Pages} {\newline Kui Zhao, Bangpeng Li, Can Wang}{}{}{{Expert Systems with Applications, 2016.(SCI期刊，投稿中)}}
+\end{CJK*}
+\end{document}
+
+%% end of file `template.tex'.
